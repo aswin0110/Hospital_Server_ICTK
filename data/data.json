@@ -1,0 +1,21 @@
+[
+    {
+        "id": 1,
+        "Hospital_Name":"Hospital A",
+        "Patient_Count":58,
+        "H_Location":"Kannur"
+    },
+
+    {
+        "id": 2,
+        "Hospital_Name":"Hospital B",
+        "Patient_Count":43,
+        "H_Location":"Kozhikod"
+    },
+    {
+        "id": 3,
+        "Hospital_Name":"Hospital C",
+        "Patient_Count":35,
+        "H_Location":"Wayanad"
+    }
+]
