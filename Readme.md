@@ -7,12 +7,16 @@
 
 ## Run in your Terminal
 
-> $ npm init
-> $ npm i express
-> $ npm i morgan
-> $ npm i cors
-> $ npm i dotenv
-> $ npm i body-parser
+```bash
+$ npm init
+$ npm i express
+$ npm i morgan
+$ npm i cors
+$ npm i dotenv
+$ npm i body-parser
+  
+```
+
 
 ### fs.readdir
 
