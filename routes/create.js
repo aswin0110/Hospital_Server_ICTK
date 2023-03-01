@@ -5,10 +5,9 @@ const fs =require('fs')
 //GET
 router.get('/',(req,res) =>{
 
-    const a = res.send('hai')
-    console.log(`${a} shs`.yellow);
+    res.send('hai')
 
-    
+    // reading directory through get
     fs.readdir('data',(err,res) =>{
         if(err){
             console.log('Path not found');
@@ -51,6 +50,23 @@ router.post('/', (req, res) => {
 });
 
 // add new data's to the created json file
+
+// add a text
+// const newData1 = {
+//     id: 5,
+//     Hospital_Name: 'Hospital E',
+//     Patient_Count: 20,
+//     H_Location: '"ALPY'
+// };
+
+// fs.appendFile("./data/newData.json",newData1,function(error){
+//     if (error){
+//         console.log('unable to write')
+//     }
+//     else{
+//         console.log('done append working');
+//     }
+// });
 
 
 
