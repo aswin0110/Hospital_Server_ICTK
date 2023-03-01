@@ -24,8 +24,3 @@ $ npm i body-parser
   
 ```
 
-
-### fs.readdir
-
-The **fs.readdir()** : method is used to asynchronously read the contents of a given directory. The callback of this method returns an array of all the file names in the directory. The options argument can be used to change the format in which the files are returned from the method.
-
