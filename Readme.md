@@ -5,7 +5,14 @@
 >-   Perform CRUD(GET,POST,PUT,DELETE) operations on the dataset
 >-   Use the core modules available in NodeJS to read,write to the JSON file.
 
-## Run in your Terminal
+## Use these
+
+Clone the project
+
+```bash
+  git clone https://github.com/aswin0110/Hospital_Server_ICTK.git
+```
+Install these
 
 ```bash
 $ npm init
