@@ -24,7 +24,7 @@ $ npm i body-parser
   
 ```
 
-JSON File Formate
+### JSON File Formate
 
 ```bash
 {
@@ -34,3 +34,4 @@ JSON File Formate
   "H_Location": "Kollam"
 }
 ```
+
