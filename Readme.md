@@ -16,12 +16,21 @@ Install these
 
 ```bash
 $ npm init
+```
+```bash
 $ npm i express
+```
+```bash
 $ npm i morgan
+```
+```bash
 $ npm i cors
+```
+```bash
 $ npm i dotenv
-$ npm i body-parser
-  
+```
+```bash
+$ npm i body-parser 
 ```
 
 ## JSON File Formate
@@ -34,4 +43,5 @@ $ npm i body-parser
   "H_Location": "Kollam"
 }
 ```
+
 
