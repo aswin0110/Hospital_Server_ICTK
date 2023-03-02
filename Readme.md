@@ -24,3 +24,13 @@ $ npm i body-parser
   
 ```
 
+JSON File Formate
+
+```bash
+{
+  "id": 5,
+  "Hospital_Name": "Hospital CD",
+  "Patient_Count": 355,
+  "H_Location": "Kollam"
+}
+```
