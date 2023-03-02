@@ -74,7 +74,7 @@ router.delete('/', (req,res) =>{
         if (!error) {
         fs.unlink(filePath,function(error){
         if(error) console.error('Error Occured:', error);
-            console.log('File deleted!'.red);
+            console.log('File deleted Successfully!'.red);
             res.send('Deleted Successfully');
         });
         } else {

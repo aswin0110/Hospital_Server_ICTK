@@ -16,11 +16,5 @@
         "Hospital_Name":"Hospital C",
         "Patient_Count":35,
         "H_Location":"Wayanad"
-    },
-    {
-        "id": 4,
-        "Hospital_Name":"Hospital D",
-        "Patient_Count":325,
-        "H_Location":"Kollam"
     }
 ]
