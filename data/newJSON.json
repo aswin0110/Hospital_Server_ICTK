@@ -1,6 +1,6 @@
 {
-  "id": "4",
-  "Hospital_Name": "Hospital F",
-  "Patient_Count": "52",
-  "H_Location": "BNGLR"
+  "id": 5,
+  "Hospital_Name": "Hospital C",
+  "Patient_Count": 35,
+  "H_Location": "Wayanad"
 }

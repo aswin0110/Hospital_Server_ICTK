@@ -43,11 +43,11 @@ app.use('/',welcome)
 
 //main page with json page: /main
 const main = require('./routes/main')
-app.use('/main',main)
+app.use('/api/main',main)
 
 //create a  json using post and save a file in ./data folder
 const create = require('./routes/create')
-app.use('/create',create)
+app.use('/api/create',create)
 
 
 //get single data from json by district /district/Kannur 
@@ -55,7 +55,15 @@ app.get('/class/:H_Location',(req,res) => {
     const Place_locate = req.params.H_Location;
 
     const Place = data.filter((Place) => Place.H_Location === Place_locate);
-    res.send(Place);
+    
+    try {
+        res.send(Place);
+        console.log(Place)
+        
+    } catch (error) {
+        console.log(error)
+    }
+    
 
 })
 

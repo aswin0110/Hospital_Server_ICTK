@@ -5,7 +5,8 @@ const fs =require('fs')
 //GET
 router.get('/',(req,res) =>{
 
-    res.send('hai')
+    res.send('Welcome to Server')
+    
 
     // reading directory through get
     fs.readdir('data',(err,res) =>{
@@ -51,22 +52,29 @@ router.post('/', (req, res) => {
 
 // add new data's to the created json file
 
-// add a text
-// const newData1 = {
-//     id: 5,
-//     Hospital_Name: 'Hospital E',
-//     Patient_Count: 20,
-//     H_Location: '"ALPY'
-// };
+router.put('/', (req, res) => {
+    const { id, Hospital_Name, Patient_Count, H_Location } = req.body;
+    const newData = {
+    id,
+    Hospital_Name,
+    Patient_Count,
+    H_Location
+};
 
-// fs.appendFile("./data/newData.json",newData1,function(error){
-//     if (error){
-//         console.log('unable to write')
-//     }
-//     else{
-//         console.log('done append working');
-//     }
-// });
+
+
+fs.appendFile('./data/newJSON.json',JSON.stringify(newData, null, 2), err =>{
+    if(err){
+        console.log(err);
+
+    }
+    else{
+        console.log('File Successfully written!'.green);
+        res.send('done')
+    }
+})
+
+});
 
 
 
