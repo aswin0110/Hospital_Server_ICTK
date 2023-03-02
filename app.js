@@ -55,10 +55,10 @@ app.use('/api/create',create)
 // const find = require('./routes/find')
 // app.use('/find/:H_Location',find)
 
-app.get('/find/Kannur',(req,res) => {
-    const data = require('../data/data.json')
+app.get('/find/:H_Location',(req,res) => {
+    
     const Place_locate = req.params.H_Location;
-
+    const data = require('./data/data.json')
     const Place = data.filter((Place) => Place.H_Location === Place_locate);
     
     try {
