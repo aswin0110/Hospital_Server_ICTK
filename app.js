@@ -51,10 +51,6 @@ app.use('/api/create',create)
 
 
 //get single data from json by district /find/Kannur 
-
-// const find = require('./routes/find')
-// app.use('/find/:H_Location',find)
-
 app.get('/find/:H_Location',(req,res) => {
     
     const Place_locate = req.params.H_Location;
