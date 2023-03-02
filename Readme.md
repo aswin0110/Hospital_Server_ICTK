@@ -15,22 +15,22 @@ Clone the project
 Install these
 
 ```bash
-$ npm init
+npm init
 ```
 ```bash
-$ npm i express
+npm i express
 ```
 ```bash
-$ npm i morgan
+npm i morgan
 ```
 ```bash
-$ npm i cors
+npm i cors
 ```
 ```bash
-$ npm i dotenv
+npm i dotenv
 ```
 ```bash
-$ npm i body-parser 
+npm i body-parser 
 ```
 
 ## JSON File Formate
