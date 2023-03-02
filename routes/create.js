@@ -2,6 +2,7 @@ const express = require('express')
 const router = express.Router();
 const fs =require('fs')
 
+
 //GET
 router.get('/',(req,res) =>{
 
@@ -20,6 +21,7 @@ router.get('/',(req,res) =>{
 });
 
 
+
 //CREATE A JSON FILE USING .post and writeFile
 
 router.post('/', (req, res) => {
@@ -33,17 +35,13 @@ router.post('/', (req, res) => {
   
     res.json(newData);
 
-    fs.writeFile('./data/newJSON.json',JSON.stringify([newData], null, 2), err => {
-        if(err) {
+    fs.writeFile('./data/newJSON.json', JSON.stringify([newData], null, 2), err => {
+            try {
+                console.log('newJSON.json File Successfully Created!'.yellow);
+            } catch (error) {
+                console.log(error);
+            }
 
-            console.log(err);
-    
-        }
-        else{
-            let jsonfile = require('./data/newJSON.json');
-            res.send(jsonfile)
-            console.log('newJSON.json File Successfully written!'.yellow);
-        }
 
     });
 
@@ -53,16 +51,14 @@ router.post('/', (req, res) => {
 router.put('/',(req, res) =>{
     const data = require('../data/newJSON.json')
     data.push(req.body)
-    // console.log(req.body)
     
     fs.writeFile('./data/newJSON.json', JSON.stringify(data),(err) =>{
         if (err) {
             res.send('Data cannot be Added')
         }
         else {
-            console.log( req.body)
-            // res.send(data)
-            res.send('Data Successfully Added')
+            console.log(' Successfully added data '.yellow)
+            res.send(data)
         }
     })
 });

@@ -2,7 +2,7 @@ const express = require('express')
 const router = express.Router();
 
 
-const jsonData = require('../data/data.json')
+const jsonData = require('../data/newJSON.json')
 
 //GET
 router.get('/',(req,res) =>{
