@@ -10,10 +10,6 @@ router.get('/',(req,res) =>{
     res.json(jsonData);
 })
 
-router.post('/', (req,res) =>{
-    console.log('data', req.body)
-    res.send('success')
-})
 
 
 

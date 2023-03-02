@@ -21,7 +21,6 @@ router.get('/',(req,res) =>{
 
 
 //CREATE A JSON FILE USING .post and writeFile
-//write to create a json file and add json's through body in postman 
 
 router.post('/', (req, res) => {
     const { id, Hospital_Name, Patient_Count, H_Location } = req.body;
@@ -34,7 +33,7 @@ router.post('/', (req, res) => {
   
     res.json(newData);
 
-    fs.writeFile('./data/newJSON.json',JSON.stringify(newData, null, 2), err => {
+    fs.writeFile('./data/newJSON.json',JSON.stringify([newData], null, 2), err => {
         if(err) {
 
             console.log(err);
@@ -50,35 +49,29 @@ router.post('/', (req, res) => {
 
 });
 
-// add new data's to the created json file
-
-router.put('/', (req, res) => {
-    const { id, Hospital_Name, Patient_Count, H_Location } = req.body;
-    const newData = {
-    id,
-    Hospital_Name,
-    Patient_Count,
-    H_Location
-};
-
-
-
-fs.appendFile('./data/newJSON.json',JSON.stringify(newData, null, 2), err =>{
-    if(err){
-        console.log(err);
-
-    }
-    else{
-        console.log('File Successfully written!'.green);
-        res.send('done')
-    }
-})
-
+//add data with put
+router.put('/',(req, res) =>{
+    const data = require('../data/newJSON.json')
+    data.push(req.body)
+    // console.log(req.body)
+    
+    fs.writeFile('./data/newJSON.json', JSON.stringify(data),(err) =>{
+        if (err) {
+            res.send('Data cannot be Added')
+        }
+        else {
+            console.log( req.body)
+            // res.send(data)
+            res.send('Data Successfully Added')
+        }
+    })
 });
 
 
 
-//delete created json
+
+//delete created newJOSN.json
+
 router.delete('/', (req,res) =>{
     const filePath = './data/newJSON.json';
     fs.access(filePath, error => {
@@ -94,6 +87,8 @@ router.delete('/', (req,res) =>{
         
     });
   })
+
+
 
 
 

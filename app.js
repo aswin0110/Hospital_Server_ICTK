@@ -50,8 +50,13 @@ const create = require('./routes/create')
 app.use('/api/create',create)
 
 
-//get single data from json by district /district/Kannur 
-app.get('/class/:H_Location',(req,res) => {
+//get single data from json by district /find/Kannur 
+
+// const find = require('./routes/find')
+// app.use('/find/:H_Location',find)
+
+app.get('/find/Kannur',(req,res) => {
+    const data = require('../data/data.json')
     const Place_locate = req.params.H_Location;
 
     const Place = data.filter((Place) => Place.H_Location === Place_locate);
@@ -66,6 +71,23 @@ app.get('/class/:H_Location',(req,res) => {
     
 
 })
+
+// app.delete('/data/:H_Location', (req, res) =>{
+//     const data = require('./data/newJSON.json')
+//     let {H_Location} = req.params;
+//     let item = data.filter(item => item.H_Location !== H_Location)
+//     fs.writeFile('./data/NewJSON.json', JSON.stringify(item),(err) =>{
+//         try {
+//             res.send("Data Deleted Successfully");
+//             console.log('Deleted data')
+            
+//         } catch (error) {
+//             // res.send("Data cannot be deleted")
+//             console.log('err')
+//         }
+        
+//     })
+// })
 
 
 
